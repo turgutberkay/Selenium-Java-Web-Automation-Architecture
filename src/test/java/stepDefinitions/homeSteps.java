@@ -57,7 +57,6 @@ public class homeSteps {
 
     @When("taps to Departure Date on the Home Page")
     public void tapsToDepartureDateOnTheHomePage() throws InterruptedException {
-        //Normalde thread sleep kullanımına karsiyim. Methodlarimin icinde de WebDriverWaitler kullandim. Fakat site seleniumun hizine yetisemediginden dom henuz guncellemeden selenium eski domdan elementi click etmeye calisiyor. Bundan dolayi clickable patliyor. Bu yuzden domun guncellenmesi icin thread sleep ile sure tanimayi tercih ettim
         Thread.sleep(1500);
         homePage.clickDepartureDate();
         Thread.sleep(1500);
@@ -70,7 +69,6 @@ public class homeSteps {
 
     @Then("should see Arrival Calendar on the Home Page")
     public void shouldSeeArrivalCalendarOnTheHomePage() throws InterruptedException {
-        //Normalde thread sleep kullanımına karsiyim. Methodlarimin icinde de WebDriverWaitler kullandim. Fakat site seleniumun hizine yetisemediginden dom henuz guncellemeden selenium eski domdan elementi click etmeye calisiyor. Bundan dolayi clickable patliyor. Bu yuzden domun guncellenmesi icin thread sleep ile sure tanimayi tercih ettim
         Thread.sleep(1500);
         homePage.checkArrivalCalendar();
         Thread.sleep(1500);
