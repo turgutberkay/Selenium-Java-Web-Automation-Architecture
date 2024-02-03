@@ -46,13 +46,11 @@ public class searchSteps {
 
     @When("taps to Airline Filter on the Search Page")
     public void tapsToAirlineFilterOnTheSearchPage() throws InterruptedException {
-        //Normalde thread sleep kullanımına karsiyim. Methodlarimin icinde de WebDriverWaitler kullandim. Fakat site seleniumun hizine yetisemediginden dom henuz guncellemeden selenium eski domdan elementi click etmeye calisiyor. Bundan dolayi clickable patliyor. Bu yuzden domun guncellenmesi icin thread sleep ile sure tanimayi tercih ettim
         Thread.sleep(2000);
         searchPage.clickAirlineFilter();}
 
     @When("taps to {string} Airline Filter on the Search Page")
     public void tapsToChooseAirlineFilterOnTheSearchPage(String arg0) throws InterruptedException {
-        //Normalde thread sleep kullanımına karsiyim. Methodlarimin icinde de WebDriverWaitler kullandim. Fakat site seleniumun hizine yetisemediginden dom henuz guncellemeden selenium eski domdan elementi click etmeye calisiyor. Bundan dolayi clickable patliyor. Bu yuzden domun guncellenmesi icin thread sleep ile sure tanimayi tercih ettim
         Thread.sleep(2000);
         searchPage.clickAirlineFromAirlineFilter(arg0);
         Thread.sleep(2000);
