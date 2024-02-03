@@ -61,7 +61,6 @@ public class HomePage {
     public void writeToWhereTextbox(String text) {elementUtil.sendKey(toWhereTextbox, text);}
 
     public void clickDepartureDate() {
-        //Burada randomContainer a tıklama sebebim şudur : Firefoxta departureDate ekran responsiveınden dolayı kuculuyor ve tıklanabılır olmuyor. Bosluga tıklayınca tıklanabılır oluyor. Sisteme bir cozum icin yazilmistir.
         elementUtil.click(random);
         elementUtil.click(departureDate);}
 
@@ -70,7 +69,6 @@ public class HomePage {
     public void checkArrivalCalendar() {elementUtil.checkElementVisible(arrivalCalendar);}
 
     public void chooseDepartureMonthDate(String text) {
-        // 1 yıl sonrasına kadar randevu olusturulabıldıgı ıcın 1 yıl sonrasına kadar monthu arıcak bulamazsa ayı bulamadım dicek
         boolean check = false;
         if(!elementUtil.getTextElementsWithIndex(departureCalendarDateMonth,0).equals(text) && !elementUtil.getTextElementsWithIndex(departureCalendarDateMonth,1).equals(text)){
                 for(int i = 0; i<6 ; i++ ){
@@ -84,7 +82,6 @@ public class HomePage {
         }
     }
     public void chooseArrivalMonthDate(String text) {
-        // 1 yıl sonrasına kadar randevu olusturulabıldıgı ıcın 1 yıl sonrasına kadar monthu arıcak bulamazsa ayı bulamadım dicek
         boolean check = false;
         if(!elementUtil.getTextElementsWithIndex(arrivalCalendarDateMonth,0).equals(text) && !elementUtil.getTextElementsWithIndex(arrivalCalendarDateMonth,1).equals(text)){
             for(int i = 0; i<6 ; i++ ){
@@ -113,7 +110,6 @@ public class HomePage {
     }
 
     public void chooseAdultPassengersNumber(int number) {
-        //Yolcu sayisi ilk acildiginda 10 danda baslasa else methodu sayesinde istenen degere getiriliyor
         int currentNumber = elementUtil.elementGetTextNumber(adultPassengersNumber);
         if(currentNumber == number) {
             elementUtil.checkElementGetTextNumber(adultPassengersNumber, number);
